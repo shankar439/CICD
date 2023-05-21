@@ -1,12 +1,12 @@
 # Continuous Integration And Continuous Deployment
 ![imagegit](https://github.com/shankar439/Images/assets/70714976/c37d1585-a843-4dee-8262-16514413bf77)
 # Overview
-Jenkins as CI-CD (Continuous integration and continuous deployment) tool, scripted a Declarative pipeline for various stages 
+Jenkins as CI-CD (Continuous integration and continuous deployment) tool, scripted a Declarative pipeline for various stages
 
 Stage 1. Using Git to access GitHub to check out the code ,the connection between jenkins and GitHub is SSH, using Public <br>
-and Private key to access private repository, 
+and Private key to access private repository,
 
-Stage 2. Building a JAR file(Java ARchive) using Maven command # mvn clean, mvn install 
+Stage 2. Building a JAR file(Java ARchive) using Maven command # mvn clean, mvn install
 
 Stage 3. so, in next stage Docker can utilize the JAR file to create docker image based on Docker file.
 
@@ -43,7 +43,7 @@ sudo systemctl daemon-reload
 
 ## install docker and docker pipeline plugin in jenkins
 
-## install Git in same instance and Maven using manage jenkins 
+## install Git in same instance and Maven using manage jenkins
 ```
 yum install git
 ```
