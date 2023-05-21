@@ -1,17 +1,18 @@
 # Continuous Integration And Continuous Deployment
+![imagegit](https://github.com/shankar439/Images/assets/70714976/c37d1585-a843-4dee-8262-16514413bf77)
 # Overview
 Jenkins as CI-CD (Continuous integration and continuous deployment) tool, scripted a Declarative pipeline for various stages 
 
-Stage1. Using Git to access GitHub to check out the code ,the connection between jenkins and GitHub is SSH, using Public <br>
+Stage 1. Using Git to access GitHub to check out the code ,the connection between jenkins and GitHub is SSH, using Public <br>
 and Private key to access private repository, 
 
-Stage2. Building a JAR file(Java ARchive) using Maven command # mvn clean, mvn install 
+Stage 2. Building a JAR file(Java ARchive) using Maven command # mvn clean, mvn install 
 
-Stage3. so, in next stage Docker can utilize the JAR file to create docker image based on Docker file.
+Stage 3. so, in next stage Docker can utilize the JAR file to create docker image based on Docker file.
 
-Stage4. push the created Docker image into ECR(AWS-Elastic Container Registry) using "View Push Command" provided by AWS.
+Stage 4. push the created Docker image into ECR(AWS-Elastic Container Registry) using "View Push Command" provided by AWS.
 
-Stage5. As I am using t2micro instance limited on resource, I am stopping, deleting the previous Build running container.
+Stage 5. As I am using t2micro instance limited on resource, I am stopping and deleting the previous Build running container.
 ```
 docker ps -aq | xargs --no-run-if-empty docker stop | xargs --no-run-if-empty docker rm
 ```
